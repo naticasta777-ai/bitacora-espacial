@@ -1,0 +1,50 @@
+@layer reset, base, componentes;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body,
+  h1,
+  h2,
+  p {
+    margin: 0;
+  }
+}
+
+@layer base {
+  body {
+    font-family: var(--fuente-base);
+    font-size: var(--texto-base);
+    line-height: 1.6;
+    color: var(--color-texto);
+    background: var(--color-fondo);
+    min-height: 100dvh;
+  }
+
+  main {
+    padding: var(--espacio-4);
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 1rem + 3vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: var(--espacio-3);
+  }
+
+  p {
+    max-width: 65ch;
+  }
+
+  a {
+    color: var(--color-acento);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 3px;
+  }
+}
